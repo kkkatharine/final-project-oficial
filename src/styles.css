@@ -23,12 +23,17 @@ li {
   text-decoration: none;
 }
 
+a {
+  text-decoration: none;
+}
 .weather-app {
   border: 1px solid #605a56;
   border-radius: 8px;
   padding: 20px;
   margin: 20px auto;
   max-width: 600px;
+  height: 800px;
+  background-image: url(https://wallpapercave.com/wp/wp5247751.jpg);
 }
 
 .units {
@@ -45,9 +50,6 @@ li {
   line-height: 1.5;
 }
 
-a {
-  text-decoration: none;
-}
 .weather-icon {
   height: 64px;
   width: 64px;
