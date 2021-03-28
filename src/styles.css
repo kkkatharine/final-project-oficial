@@ -29,13 +29,7 @@ li {
   margin: 20px auto;
   max-width: 600px;
 }
-.weather-condition {
-  margin-left: 15px;
-  margin-bottom: 20px;
-}
-.date {
-  margin-left: 10px;
-}
+
 .units {
   font-size: 12px;
   position: relative;
@@ -54,6 +48,9 @@ li {
 }
 
 .search-form {
-  margin: 20px;
-  margin-left: 470px;
+  margin: 20px auto;
+}
+
+#weather-condition {
+  text-transform: capitalize;
 }
