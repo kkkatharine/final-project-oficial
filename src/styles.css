@@ -38,13 +38,12 @@ li {
 .temperature {
   font-size: 64px;
   font-weight: 400px;
-  line-height: 1;
+  line-height: 1.5;
 }
 
 .weather-icon {
   height: 64px;
   width: 64px;
-  margin-right: 10px;
 }
 
 .search-form {
