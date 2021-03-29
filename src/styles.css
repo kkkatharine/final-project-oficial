@@ -1,13 +1,13 @@
 body {
-  font-family: "Montserrat", sans-serif;
-  color: #373331;
+  font-family: "Kiwi Maru", serif;
+  color: #1b2021;
 }
 
 h1 {
-  font-size: 48px;
+  font-size: 72px;
   font-weight: 400;
   line-height: 28px;
-  padding: 0;
+  padding: 15px 0;
 }
 
 ul {
@@ -19,24 +19,25 @@ li {
   display: block;
   font-size: 14px;
   font-weight: 900;
-  line-height: 16px;
+  line-height: 15px;
 }
 
 .weather-forecast {
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .weather-forecast h3 {
   font-size: 14px;
   text-align: center;
   font-weight: 900;
-  padding-top: 7px;
+  line-height: 20px;
+  margin-bottom: 0;
 }
 
 .weather-forecast img {
   display: block;
   margin: 0 auto;
-  height: 80px;
+  height: 64px;
 }
 
 .weather-forecast-temperature {
@@ -49,15 +50,14 @@ a {
 }
 
 .weather-app {
-  border: 1px solid #605a56;
+  border: 2px solid #2c061f;
   border-radius: 8px;
   padding: 20px;
   margin: 20px auto;
   max-width: 600px;
   height: 800px;
-  background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/006/100/original/cactos5.png?1616967979);
+  background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/006/107/original/cacto6.png?1617012529);
 }
-
 .units {
   font-size: 12px;
   position: relative;
@@ -69,7 +69,7 @@ a {
 .temperature {
   font-size: 64px;
   font-weight: 400px;
-  line-height: 1.5;
+  line-height: 2;
 }
 
 .weather-icon {
@@ -99,4 +99,38 @@ a {
 }
 .fahrenheit {
   text-decoration: none;
+}
+
+.temp-min {
+  border: 2px dotted #2c061f;
+  border-radius: 8px;
+  padding: 7px;
+  margin: 7px auto;
+  position: relative;
+  margin-top: -37px;
+  text-align: center;
+}
+
+.temp-max {
+  border: 2px dotted #2c061f;
+  border-radius: 8px;
+  padding: 7px;
+  margin: 7px auto;
+  text-align: center;
+}
+
+.humidity {
+  border: 2px dotted #2c061f;
+  border-radius: 8px;
+  padding: 7px;
+  margin: 7px auto;
+  text-align: center;
+}
+
+.wind {
+  border: 2px dotted #2c061f;
+  border-radius: 8px;
+  padding: 7px;
+  margin: 7px auto;
+  text-align: center;
 }

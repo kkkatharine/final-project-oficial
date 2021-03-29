@@ -39,12 +39,25 @@ function displayTemperature(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
+function formatHours(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  return `${hours}:${minutes}`;
+}
+
 function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
   let forecast = response.data.list[0];
   console.log(forecast);
   forecastElement.innerHTML = ` <div class="col-3">
-    <h3>09:00</h3>
+    <h3>${formatHours(forecast.dt * 1000)}</h3>
     <img src="http://openweathermap.org/img/wn/${
       forecast.weather[0].icon
     }@2x.png" />
@@ -54,6 +67,45 @@ function displayForecast(response) {
   )}º
     </div>
   </div>`;
+
+  forecast = response.data.list[1];
+  forecastElement.innerHTML += ` <div class="col-3">
+<h3>${formatHours(forecast.dt * 1000)}</h3>
+<img src="http://openweathermap.org/img/wn/${
+    forecast.weather[0].icon
+  }@2x.png" />
+<div class="weather-forecast-temperature">
+  <strong>${Math.round(forecast.main.temp_max)}º</strong> ${Math.round(
+    forecast.main.temp_min
+  )}º
+</div>
+</div>`;
+
+  forecast = response.data.list[2];
+  forecastElement.innerHTML += ` <div class="col-3">
+<h3>${formatHours(forecast.dt * 1000)}</h3>
+<img src="http://openweathermap.org/img/wn/${
+    forecast.weather[0].icon
+  }@2x.png" />
+<div class="weather-forecast-temperature">
+  <strong>${Math.round(forecast.main.temp_max)}º</strong> ${Math.round(
+    forecast.main.temp_min
+  )}º
+</div>
+</div>`;
+
+  forecast = response.data.list[3];
+  forecastElement.innerHTML += ` <div class="col-3">
+<h3>${formatHours(forecast.dt * 1000)}</h3>
+<img src="http://openweathermap.org/img/wn/${
+    forecast.weather[0].icon
+  }@2x.png" />
+<div class="weather-forecast-temperature">
+  <strong>${Math.round(forecast.main.temp_max)}º</strong> ${Math.round(
+    forecast.main.temp_min
+  )}º
+</div>
+</div>`;
 }
 
 function search(city) {

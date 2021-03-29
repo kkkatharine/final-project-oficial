@@ -13,7 +13,7 @@
       crossorigin="anonymous"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Montserrat:wght@200&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="src/styles.css" />
@@ -27,8 +27,9 @@
               id="city-input"
               type="search"
               placeholder="Choose your city"
+              autocomplete="off"
             />
-            <input type="submit" value="🔍" autocomplete="off" />
+            <input type="submit" value="🔍" />
             <button id="current-location-button">📍</button>
           </form>
         </div>
@@ -55,10 +56,18 @@
           </div>
           <div class="col-6">
             <ul>
-              <li>Min Temperature: <span id="min-temp"></span>º</li>
-              <li>Max Temperature: <span id="max-temp"></span>º</li>
-              <li>Humidity: <span id="humidity"></span>%</li>
-              <li>Wind: <span id="wind"></span>km/h</li>
+              <div class="temp-min">
+                <li>Min Temperature: <span id="min-temp"></span>º</li>
+              </div>
+              <div class="temp-max">
+                <li>Max Temperature: <span id="max-temp"></span>º</li>
+              </div>
+              <div class="humidity">
+                <li>Humidity: <span id="humidity"></span>%</li>
+              </div>
+              <div class="wind">
+                <li>Wind: <span id="wind"></span>km/h</li>
+              </div>
             </ul>
           </div>
         </div>
@@ -95,6 +104,7 @@
         </div>
       </div>
     </div>
+
     <script src="src/script.js"></script>
   </body>
 </html>
