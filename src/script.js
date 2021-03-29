@@ -39,10 +39,30 @@ function displayTemperature(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
+function displayForecast(response) {
+  let forecastElement = document.querySelector("#forecast");
+  let forecast = response.data.list[0];
+  console.log(forecast);
+  forecastElement.innerHTML = ` <div class="col-3">
+    <h3>09:00</h3>
+    <img src="http://openweathermap.org/img/wn/${
+      forecast.weather[0].icon
+    }@2x.png" />
+    <div class="weather-forecast-temperature">
+      <strong>${Math.round(forecast.main.temp_max)}º</strong> ${Math.round(
+    forecast.main.temp_min
+  )}º
+    </div>
+  </div>`;
+}
+
 function search(city) {
   let apiKey = "21cae2f9a5ebbd41bf28f1b8f97e683b";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayTemperature);
+
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function handleSubmit(event) {
