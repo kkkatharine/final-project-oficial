@@ -22,9 +22,28 @@ li {
   line-height: 16px;
 }
 
-.col-3 {
-  text-align: center;
+.weather-forecast {
+  margin-top: 20px;
 }
+
+.weather-forecast h3 {
+  font-size: 14px;
+  text-align: center;
+  font-weight: 900;
+  padding-top: 7px;
+}
+
+.weather-forecast img {
+  display: block;
+  margin: 0 auto;
+  height: 80px;
+}
+
+.weather-forecast-temperature {
+  text-align: center;
+  font-size: 14px;
+}
+
 a {
   text-decoration: none;
 }
