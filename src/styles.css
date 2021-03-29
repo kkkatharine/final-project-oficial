@@ -17,15 +17,18 @@ ul {
 
 li {
   display: block;
-  font-size: 12px;
-  font-weight: 400;
+  font-size: 14px;
+  font-weight: 900;
   line-height: 16px;
-  text-decoration: none;
 }
 
+.col-3 {
+  text-align: center;
+}
 a {
   text-decoration: none;
 }
+
 .weather-app {
   border: 1px solid #605a56;
   border-radius: 8px;
@@ -33,7 +36,7 @@ a {
   margin: 20px auto;
   max-width: 600px;
   height: 800px;
-  background-image: url(https://wallpapercave.com/wp/wp5247751.jpg);
+  background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/006/100/original/cactos5.png?1616967979);
 }
 
 .units {
